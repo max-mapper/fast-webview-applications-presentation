@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'doin-it-wrong' target in the 'doin-it-wrong' project
+//
+
+#ifdef __OBJC__
+  #import <UIKit/UIKit.h>
+#endif

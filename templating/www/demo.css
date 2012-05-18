@@ -1,0 +1,27 @@
+body {
+  background: #F0F1EB;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
+}
+
+a { margin: 0px 10px; color: #444; font-size: 25px; }
+a:active { background-color: salmon; }
+
+.nav {
+  margin: 10px;
+  position: absolute;
+  height: 30px;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.content { 
+  border-top: 1px solid #444;
+  -webkit-overflow-scrolling: touch;
+  overflow: scroll;
+  position: fixed;
+  top: 50px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}

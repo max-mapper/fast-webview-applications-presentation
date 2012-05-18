@@ -1,0 +1,8 @@
+.sprite-images-retina-text,
+.sprite-images-retina-text-focus,
+.sprite-images-retina-date,
+.sprite-images-retina-date-focus{background-image:url(images-retina.png);background-repeat:no-repeat;}
+.sprite-images-retina-text{background-position:0px 0px;width:80px; height:80px;}
+.sprite-images-retina-text-focus{background-position:0px -80px;width:80px; height:80px;}
+.sprite-images-retina-date{background-position:0px -160px;width:80px; height:80px;}
+.sprite-images-retina-date-focus{background-position:0px -240px;width:80px; height:80px;}

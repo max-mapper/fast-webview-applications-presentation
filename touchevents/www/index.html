@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebView Touch Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+    <link rel="stylesheet" href="defaults.css">
+    <link rel="stylesheet" href="demo.css">
+    <script type="text/javascript" src="zepto.js"></script>
+    <script type="text/javascript" src="zepto-event.js"></script>
+    <script type="text/javascript" src="zepto-touch.js"></script>
+    <script type="text/javascript" src="cordova-1.7.0.js"></script>
+    <script type="text/javascript" src="browserify-bundle.js"></script>
+    <script type="text/javascript" src="phantomlimb.js"></script>
+    <script type="text/javascript" src="touch-helpers.js"></script>
+    <script type="text/javascript">
+      var app = {}
+      var events = require('events')
+      var url = require('url')
+    
+      $(function() {
+        
+        app.emitter = new events.EventEmitter
+        
+        var eventLog = $('.eventLog')
+        
+        app.emitter.on('modal', function(route) {
+          eventLog.append('<div>modal: ' + route + '</div>')
+        })
+        
+        window.onhashchange = function(e) {
+          var path = url.parse(window.location.href.replace(/\s/g, ''))
+          eventLog.append('<div>hash: ' + path.hash + '</div>')
+        }
+        
+        listenForTouches()
+      })
+    </script>
+    
+  </head>
+  <body>
+    <a href="#/">#/</a>
+    <a href="#/cats">#/cats</a>
+    <a href="#/popup!">#/popup!</a>
+    <div class="eventLog"></div>
+  </body>
+</html>

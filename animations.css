@@ -1,0 +1,9 @@
+/* built in cubic-bezier */
+.slow   { -webkit-transition: all 0.35s ease-in-out; }
+.medium { -webkit-transition: all 0.25s ease-in-out; }
+.fast   { -webkit-transition: all 0.15s ease; }
+
+/* custom cubic beziers */
+.animates { -webkit-transition: -webkit-transform 0 cubic-bezier(0, 0, 0.2, 1); }
+
+/* keyframes */

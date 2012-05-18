@@ -1,0 +1,8 @@
+.sprite-images-text,
+.sprite-images-text-focus,
+.sprite-images-date,
+.sprite-images-date-focus{background-image:url(images.png);background-repeat:no-repeat;}
+.sprite-images-text{background-position:0px 0px;width:40px; height:40px;}
+.sprite-images-text-focus{background-position:0px -40px;width:40px; height:40px;}
+.sprite-images-date{background-position:0px -80px;width:40px; height:40px;}
+.sprite-images-date-focus{background-position:0px -120px;width:40px; height:40px;}

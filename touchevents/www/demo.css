@@ -1,0 +1,7 @@
+body {
+  background: #F0F1EB;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
+}
+a { margin: 0px 10px; color: #444; font-size: 25px; }
+a:active { background-color: salmon; }
+div { font-size: 20px; font-family: Monaco, Consolas, "Lucida Console", monospace; }

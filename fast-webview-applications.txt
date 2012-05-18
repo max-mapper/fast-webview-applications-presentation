@@ -1,0 +1,48 @@
+Fast WebView Applications
+
+A few months ago I started writing an iPhone application called Gather. Instead of writing the interface using CocoaTouch, Interface Builder and the rest of the native iOS UI components I decided to use HTML5+JS instead. This meant that I wouldn't have access to a UI toolkit - I would only get a blank, white rectangular canvas to work with. On the other hand, I would get to build the interface using HTML5 and CSS3, both of which have made leaps and bounds in recent years. Is 2012 the year that HTML5 will be good enough to write a compelling 'native' app in? Let's find out!
+
+Background philosophy: 
+  oppressive pre-enlightenment, islam in spain, cordoba pun
+  WHAT IS THE CATO QUOTE
+  cato the elder vs carthage
+
+WebView benefits
+  PhoneGap plugins
+    - fb + twitter
+    - push notifications
+  Persistence control
+  UI control
+Zepto
+  webkit specific
+  smaller footprint
+  code is easy to read
+  broken up into pieces
+Touch Events
+  300ms delay
+  Phantom Limb
+Routing
+  Director
+  listenForTouches
+Templating
+  Mustache
+HTTP
+  Request
+Spriting
+  glue images/ . --simple --algorithm=vertical
+  Retina
+Animation
+  Always test on device!
+  Scrollability
+  WHAT IS THE KEYFRAME APP FROM GITHUB
+  keyframe vs cubic bezier
+  cubic-bezier cant have < 0, > 100
+  position: absolute vs -webkit-transform
+Oddities
+  datetime
+    focus weirdness
+    placeholder/value
+  localStorage
+  XCode
+  debugging
+  anti-aliasing

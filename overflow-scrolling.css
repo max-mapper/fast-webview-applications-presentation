@@ -1,0 +1,8 @@
+.scroller { 
+  -webkit-overflow-scrolling: touch;
+  position: fixed;
+  top: 50px;
+  bottom: 55px;
+  right: 0;
+  left: 0;
+}

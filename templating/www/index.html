@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebView Templating + Routing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+    <link rel="stylesheet" href="defaults.css">
+    <link rel="stylesheet" href="demo.css">
+    <script type="text/javascript" src="zepto.js"></script>
+    <script type="text/javascript" src="zepto-event.js"></script>
+    <script type="text/javascript" src="zepto-touch.js"></script>
+    <script type="text/javascript" src="mustache.js"></script>
+    <script type="text/javascript" src="director-1.0.7.js"></script>
+    <script type="text/javascript" src="cordova-1.7.0.js"></script>
+    <script type="text/javascript" src="browserify-bundle.js"></script>
+    <script type="text/javascript" src="phantomlimb.js"></script>
+    <script type="text/javascript" src="touch-helpers.js"></script>
+    <script type="text/javascript">
+      var app = {}
+      var events = require('events')
+      
+      function render( template, target, data ) {
+        target = $( target ).first()
+        target.html( buildTemplate(template, data) )
+      }
+      
+      function buildTemplate(template, data) {
+        return $.mustache( $( "." + template + "Template" ).first().html(), data || {} )
+      }
+    
+      $(function() {
+        
+        app.emitter = new events.EventEmitter
+        
+        var routes = {
+          cats: function() {
+            var cats = ['aristotle.png', 'bikecat.png', 'awesomecat.gif', 'walkingcat.png', 'seriouscat.png']
+            render('gallery', '.content', {pictures: cats})
+          },
+          dogs: function() {
+            var dogs = ['hellodog.png', 'shopdog.png', 'awesomedog.png', 'coco.png']
+            render('gallery', '.content', {pictures: dogs})
+            
+          }
+        }
+        
+        Router({
+          '/': {
+            on: function() { redirect("#/cats") }
+          },
+          '/:page': { 
+            on: function(page) {
+              routes[page]()
+            }
+          }
+        }).init('/')
+        
+        app.emitter.on('modal', function(route) { routes[route]() })
+        
+        listenForTouches()
+      })
+    </script>
+    
+  </head>
+  <body>
+    <div class="nav">
+      <a href="#/cats">#/cats</a>
+      <a href="#/dogs">#/dogs</a>
+    </div>
+    <div class="content"></div>
+    
+    <script type='text/mustache' class="galleryTemplate">
+      {{#pictures}}
+        <img src="{{.}}">
+      {{/pictures}}
+    </script>
+  </body>
+</html>

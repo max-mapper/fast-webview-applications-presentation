@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebView Generic App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+    <link rel="stylesheet" href="demo.css">
+    <script type="text/javascript" src="cordova-1.7.0.js"></script>
+    <script type="text/javascript">
+      
+      var start, end
+      
+      document.addEventListener('touchstart', function() {
+        start = new Date()
+      })
+      
+      document.addEventListener('mouseup', function() {
+        end = new Date()
+      })
+    
+      document.addEventListener('DOMContentLoaded', function() {
+        
+        var eventLog = document.querySelectorAll('.eventLog')[0]
+        
+        window.onhashchange = function(e) {
+          eventLog.innerHTML += "<br>" + (end - start) + 'ms'
+        }
+        
+      })
+      
+    </script>
+    
+  </head>
+  <body>
+    <a href="#/">#/</a>
+    <a href="#/cats">#/cats</a>
+    <a href="#/dogs">#/dogs</a>
+    <div class="eventLog"></div>
+  </body>
+</html>

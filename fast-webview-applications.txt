@@ -64,3 +64,9 @@ Animation - animations.css
   keyframe vs cubic bezier
   cubic-bezier cant have < 0, > 100
   position: absolute vs -webkit-transform
+
+Experimental
+  websockets/streaming xhr
+  svg/canvas
+  filesystem access
+  

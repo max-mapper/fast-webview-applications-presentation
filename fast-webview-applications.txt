@@ -1,48 +1,66 @@
 Fast WebView Applications
 
-A few months ago I started writing an iPhone application called Gather. Instead of writing the interface using CocoaTouch, Interface Builder and the rest of the native iOS UI components I decided to use HTML5+JS instead. This meant that I wouldn't have access to a UI toolkit - I would only get a blank, white rectangular canvas to work with. On the other hand, I would get to build the interface using HTML5 and CSS3, both of which have made leaps and bounds in recent years. Is 2012 the year that HTML5 will be good enough to write a compelling 'native' app in? Let's find out!
+- two ways to make iOS apps: native UI or web stack through WebView
+- there are bad, bad defaults in the WebView
 
-Background philosophy: 
-  oppressive pre-enlightenment, islam in spain, cordoba pun
-  WHAT IS THE CATO QUOTE
-  cato the elder vs carthage
+Background philosophy:
+  
+  cordoba: jewel of the world
+  cordova: diamond in the rough
+  
+  carthago delenda est - "Furthermore I think Carthage must be destroyed"
+  "Cato the Elder would always end with this expression even if he had not been discussing Carthage in the speech."
+  
+  @izs - stagnation vs chaos. js vs obj-c
 
-WebView benefits
-  PhoneGap plugins
-    - fb + twitter
-    - push notifications
-  Persistence control
-  UI control
-Zepto
-  webkit specific
-  smaller footprint
-  code is easy to read
-  broken up into pieces
-Touch Events
-  300ms delay
+Why go through all the trouble?
+  WebView benefits
+    Fast load times
+    PhoneGap plugins
+      - fb + twitter sdk
+      - push notifications
+    Persistence control
+    UI control
+
+doin-it-wrong app
+  ~400ms delay for clicks
+  defaults.css
+
+touchevents app
+  listenForTouches - touch-helpers.js
+
+  Zepto
+    webkit specific
+    smaller footprint
+    code is easy to read
+    broken up into pieces
+    zepto.touch && tap event
   Phantom Limb
-Routing
-  Director
-  listenForTouches
-Templating
-  Mustache
-HTTP
-  Request
-Spriting
-  glue images/ . --simple --algorithm=vertical
-  Retina
-Animation
-  Always test on device!
-  Scrollability
-  WHAT IS THE KEYFRAME APP FROM GITHUB
-  keyframe vs cubic bezier
-  cubic-bezier cant have < 0, > 100
-  position: absolute vs -webkit-transform
+
+templating app
+  Templating: github.com/janl/mustache.js
+  Routing: github.com/flatiron/director
+  overflow-scrolling.css
+
+form app
+  Spriting
+    glue images/ . --simple --algorithm=vertical
+    Retina
+  
 Oddities
   datetime
     focus weirdness
     placeholder/value
-  localStorage
-  XCode
-  debugging
-  anti-aliasing
+  localStorage 5.1
+  XCode (in general)
+  debugging (in general)
+  anti-aliasing dom elements
+
+Animation - animations.css
+  Always test on device!
+  use built in stuff when possible
+  Scrollability
+  https://github.com/jeremyckahn/stylie
+  keyframe vs cubic bezier
+  cubic-bezier cant have < 0, > 100
+  position: absolute vs -webkit-transform

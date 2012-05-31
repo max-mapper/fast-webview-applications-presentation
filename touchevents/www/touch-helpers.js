@@ -1,7 +1,7 @@
 function listenForTouches() {
   turnOffClick(['a', 'input'])
   
-  $('a').live('tap', function(e) { catchModals(e) })
+  $('a').live('tap', function(e) { handleTaps(e) })
   
   $('input').live('tap', function(e) {
     e.preventDefault()
@@ -29,7 +29,7 @@ function turnOffClick(elems) {
   })
 } 
 
-function catchModals( event ) {
+function handleTaps( event ) {
   var route = $(event.currentTarget).attr('href')
   if (!route) return false
   // Basic rules:

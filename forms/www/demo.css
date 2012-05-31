@@ -19,7 +19,9 @@ h1 {
 
 .inputContainer { width: 100%; position: relative; height: 50px; }
 
-input { 
+.sprite { 
+  background-image: url(images.png);
+  background-repeat:no-repeat;
   position: absolute;
   right: 5px;
   left: 5px;
@@ -35,20 +37,19 @@ input {
   font-size: 18.11px;
   font-weight: normal;
 }
+
 input::-webkit-input-placeholder { opacity: .8; }
 input[type="text"]:focus, .ui-content input[type="datetime"]:focus { background-color: #fffbcd; }
 
 /* MANUAL IMAGES */
 
-.text { background-image: url('images/text.png') }
+/*.text { background-image: url('images/text.png') }
 .text:focus { background-image: url('images/text-focus.png') }
 
 .date { background-image: url('images/date.png') }
 .date:focus { background-image: url('images/date-focus.png') }
+*/
 
-/* SPRITED IMAGES */
-/*
-.sprite{background-image:url(images.png);background-repeat:no-repeat;}
 .text{background-position:0px 0px;}
 .text:focus{background-position:0px -40px;}
 .date{background-position:0px -80px;}
@@ -60,4 +61,4 @@ input[type="text"]:focus, .ui-content input[type="datetime"]:focus { background-
     background-repeat:no-repeat;
     background-size: 40px 160px;
   }
-}*/
+}
